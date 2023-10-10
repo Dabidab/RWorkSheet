@@ -130,7 +130,7 @@ vegetables
 vegetables <- c(vegetables, "Soybeans", "Green Pepper")
 vegetables
 #C. 
-vegetables <- append(vegetables, c(" Pumpkin", "Radish", "Beet", "Celery"), after = 5)
+vegetables <- append(vegetables, c(" Pumpken", "Radish", "Beet", "Celery"), after = 5)
 length(vegetables)
 vegetables
 #D.
