@@ -135,7 +135,7 @@ greater_than_5_siblings
 ```
 #4. INTERPRET THE GRAPH
 The depicted graph seems to represent a sentiment analysis conducted on Twitter data, focusing on the time span of July 14, 15, 17, 18, 20, and 21 in the year 2020. This sentiment analysis classifies tweets into three sentiment categories: negative, neutral, and positive. 
-Let's delve into an analysis of the findings:
+Let's delve into an analysis of the findings::
 
 - July 14, 2020:
   - Negative count: Nearly 2,500 tweets were categorized as negative.
