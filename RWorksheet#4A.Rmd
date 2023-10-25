@@ -51,7 +51,7 @@ summary(factor_months_vector)
 ```
 ```{r num4}
 
-dadirect_vector <- c("East", "West", "North")
+dadiarect_vector <- c("East", "West", "North")
 dafreque_vector <- c(1, 4, 3)
 
 new_order_data <- factor(factor_data, levels = c("East", "West", "North"))
