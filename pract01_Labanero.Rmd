@@ -1,0 +1,29 @@
+---
+title: "Practical Exam in CS 101"
+author: "Carl Dave Labanero BSIT-2B"
+date: "2023-11-14"
+output: pdf_document
+---
+
+``` {r num1}
+data("mtcars")
+
+```
+
+``` {r num2}
+#there are 32 observatios
+#there are 11 columns
+# the columns are ( mpg cyl  disp  hp drat    wt  qsec vs am gear carb)
+```
+``` {r num3}
+install.packages("tibble")
+head(mtcars)
+
+head(mtcars)
+summary("mtcars")
+
+
+```
+``` {r num4}
+
+```
