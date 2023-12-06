@@ -1,0 +1,109 @@
+---
+title: "RWorksheet_Labanero#6"
+author: "Carl Dave Labanero BSIT-2B"
+date: "2023-12-06"
+output: pdf_document
+---
+
+```{r num1}
+data <- data.frame(
+  Student = 1:10,
+  Pre_test = c(55, 54, 47, 57, 51, 61, 57, 54, 63, 58),
+  Post_test = c(61, 60, 56, 63, 56, 63, 59, 56, 62, 61)
+)
+data
+```
+
+```{r num1a}
+install.packages("Hmisc")
+library(Hmisc)
+install.packages("pastecs")
+library(pastecs)
+
+stat.desc(data)
+
+```
+
+```{r num2}
+
+fertt <- c(10, 10, 10, 20, 20, 50, 10, 20, 10, 50, 20, 50, 20, 10)
+
+fertilizer_levels <- factor(fertt, levels = c(10, 20, 50), ordered = TRUE)
+
+fertilizer_levels
+
+```
+
+```{r num3}
+exercise_levels <- c("l", "n", "n", "i", "l", "l", "n", "n", "i", "l")
+
+exercise_factor <- factor(exercise_levels, levels = c("n", "l", "i"), labels = c("none", "light", "intense"))
+
+exercise_factor
+
+```
+
+```{r num4}
+
+state <- c("tas", "sa", "qld", "nsw", "nsw", "nt", "wa", "wa", "qld",
+           "vic", "nsw", "vic", "qld", "qld", "sa", "tas", "sa", "nt",
+           "wa", "vic", "qld", "nsw", "nsw", "wa", "sa", "act", "nsw",
+           "vic", "vic", "act")
+
+state_factor <- factor(state, levels = c("act", "nsw", "nt", "qld", "sa", "tas", "vic", "wa"))
+
+state_factor
+#The factor variable state_factor now categorizes each individual's state of origin into one of these specified levels. The levels are organized based on the order provided: from "act" representing the Australian Capital Territory to "wa" representing Western Australia.
+
+
+```
+
+```{r num5a}
+state <- c("tas", "sa", "qld", "nsw", "nsw", "nt", "wa", "wa", "qld",
+           "vic", "nsw", "vic", "qld", "qld", "sa", "tas", "sa", "nt",
+           "wa", "vic", "qld", "nsw", "nsw", "wa", "sa", "act", "nsw",
+           "vic", "vic", "act")
+incomes <- c(60, 49, 40, 61, 64, 60, 59, 54, 62, 69, 70, 42, 56, 61, 61, 61, 58, 51, 48,
+             65, 49, 49, 41, 48, 52, 46, 59, 46, 58, 43)
+
+
+state_factor <- factor(state, levels = c("act", "nsw", "nt", "qld", "sa", "tas", "vic", "wa"))
+
+
+inc_means <- tapply(incomes, state_factor, mean)
+
+inc_means
+
+```
+```{r num5b}
+#The calculated sample mean incomes for tax accountants across various Australian states highlight income disparities. New South Wales and the Northern Territory show higher average incomes around $57.8 and $58.5, respectively. In contrast, South Australia, Queensland, and Western Australia exhibit slightly lower averages ranging from $53.3 to $54.0.
+
+```
+
+```{r num6a}
+state <- c("tas", "sa", "qld", "nsw", "nsw", "nt", "wa", "wa", "qld",
+           "vic", "nsw", "vic", "qld", "qld", "sa", "tas", "sa", "nt",
+           "wa", "vic", "qld", "nsw", "nsw", "wa", "sa", "act", "nsw",
+           "vic", "vic", "act")
+incomes <- c(60, 49, 40, 61, 64, 60, 59, 54, 62, 69, 70, 42, 56, 61, 61, 61, 58, 51, 48,
+             65, 49, 49, 41, 48, 52, 46, 59, 46, 58, 43)
+
+
+state_factor <- factor(state, levels = c("act", "nsw", "nt", "qld", "sa", "tas", "vic", "wa"))
+
+stdError <- function(x) sqrt(var(x) / length(x))
+inc_std_errors <- tapply(incomes, state_factor, stdError)
+
+inc_std_errors
+
+
+```
+
+```{r num6b}
+#The variability or uncertainty in sample means is measured by standard errors. Here, the standard errors computed for the income means of each state indicate the level of variation or possible sampling error in the estimation of these means. Higher standard errors signify more variability and less precision in predicting the genuine population mean, whereas lower standard errors indicate less fluctuation around the mean estimate and consequently more precision. 
+```
+
+```{r num7}
+
+ 
+```
