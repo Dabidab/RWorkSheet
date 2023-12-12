@@ -105,5 +105,8 @@ inc_std_errors
 
 ```{r num7}
 
- 
+#install.packages("datasets")
+library(datasets)
+
+data("Titanic")
 ```
